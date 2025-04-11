@@ -1,14 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 :root {
-    --primaria: #111827; /* Azul escuro profundo */
-    --secundaria: #1f2937; /* Cinza azul escuro */
-    --destaque: #3b82f6; /* Azul vibrante */
-    --texto: #f9fafb; /* Branco suave */
-    --texto-secundario: #94a3b8; /* Cinza claro azulado */
+    --primaria: #111827;
+    /* Azul escuro profundo */
+    --secundaria: #1f2937;
+    /* Cinza azul escuro */
+    --destaque: #3b82f6;
+    /* Azul vibrante */
+    --texto: #f9fafb;
+    /* Branco suave */
+    --texto-secundario: #94a3b8;
+    /* Cinza claro azulado */
 
-    --fundo: #0a0e17; /* Fundo quase preto */
-    --fundo-card: #1e293b; /* Fundo dos cards mais limpo e sóbrio */
+    --fundo: #0a0e17;
+    /* Fundo quase preto */
+    --fundo-card: #1e293b;
+    /* Fundo dos cards mais limpo e sóbrio */
 
     --botao-bg: #3b82f6;
     --botao-hover: #2563eb;
@@ -42,7 +49,8 @@ body {
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-a, button {
+a,
+button {
     transition: all 0.3s ease;
 }
 
@@ -124,11 +132,15 @@ h1 {
 }
 
 /* Seções */
-.sobre, .projetos, .contato {
+.sobre,
+.projetos,
+.contato {
     padding: 6rem 2rem;
 }
 
-.sobre-titulo, .projetos-titulo, .contato-titulo {
+.sobre-titulo,
+.projetos-titulo,
+.contato-titulo {
     font-size: 2.5rem;
     color: var(--destaque);
     text-align: center;
@@ -185,6 +197,7 @@ h1 {
 .caixa-texto-projeto {
     padding: 1.5rem;
 }
+
 .paragrafo-projetos-tecnoligas {
     font-size: 1.1rem;
     color: var(--texto-secundario);
@@ -269,8 +282,8 @@ h1 {
     width: 200%;
     height: 200%;
     background: radial-gradient(circle, rgba(59, 130, 246, 0.2), transparent 70%),
-                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05), transparent 80%),
-                radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.03), transparent 70%);
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05), transparent 80%),
+        radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.03), transparent 70%);
     animation: fundoAnimado 40s linear infinite;
     mix-blend-mode: screen;
     filter: blur(60px);
@@ -287,9 +300,11 @@ h1 {
     0% {
         transform: translate(-25%, -25%) rotate(0deg);
     }
+
     50% {
         transform: translate(25%, 25%) rotate(180deg);
     }
+
     100% {
         transform: translate(-25%, -25%) rotate(360deg);
     }
@@ -298,18 +313,24 @@ h1 {
 
 /* Animações */
 @keyframes flutuar {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-20px);
     }
 }
 
 @keyframes animarFundo {
-    0%, 100% {
+
+    0%,
+    100% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
@@ -348,5 +369,22 @@ h1 {
 
     .projetos-caixa {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding-top: 1rem;
+    }
+
+    .navegacao {
+        padding: 1rem 0;
+    }
+
+    .menu-link {
+        font-size: 1.1rem;
     }
 }
