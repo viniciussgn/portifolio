@@ -373,18 +373,35 @@ h1 {
 }
 
 @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+      background: none;
+      border: none;
+      color: var(--texto);
+      font-size: 2rem;
+      cursor: pointer;
+      position: absolute;
+      top: 1.5rem;
+      right: 2rem;
+      z-index: 101;
+    }
+  
     .menu {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        padding-top: 1rem;
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: var(--secundaria);
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 0;
+      box-shadow: 0 8px 16px var(--sombra-suave);
     }
-
-    .navegacao {
-        padding: 1rem 0;
+  
+    .menu.ativo {
+      display: flex;
     }
-
-    .menu-link {
-        font-size: 1.1rem;
-    }
-}
+  }
+  
