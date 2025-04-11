@@ -16,25 +16,26 @@
     </div>
 
     <nav class="navegacao">
-        <button class="menu-toggle" aria-label="Abrir Menu">
-  ☰
-</button>
-
+        <button class="menu-toggle" aria-label="Abrir Menu" onclick="document.querySelector('.menu').classList.toggle('ativo')">
+          ☰
+        </button>
+      
         <ul class="menu">
-            <li>
-                <a href="#inicio" class="menu-link">inicio</a>
-            </li>
-            <li>
-                <a href="#sobre" class="menu-link">Sobre</a>
-            </li>
-            <li>
-                <a href="#projetos" class="menu-link">Projetos</a>
-            </li>
-            <li>
-                <a href="#contato" class="menu-link">Contato</a>
-            </li>
+          <li>
+            <a href="#inicio" class="menu-link">inicio</a>
+          </li>
+          <li>
+            <a href="#sobre" class="menu-link">Sobre</a>
+          </li>
+          <li>
+            <a href="#projetos" class="menu-link">Projetos</a>
+          </li>
+          <li>
+            <a href="#contato" class="menu-link">Contato</a>
+          </li>
         </ul>
-    </nav>
+      </nav>
+      
     <main id="inicio" class="cabecalho">
         <img src="img/WhatsApp Image 2025-01-13 at 19.02.01.jpeg" alt="Foto-Vinicius-Gonzalez" class="foto-perfil">
         <h1>Vinícius Gonzalez de Freitas</h1>
@@ -65,7 +66,10 @@
                 <div class="caixa-texto-projeto">
                     <h3 class="info-projetos">🚀 Portfólio Interativo</h3>
                     <p class="paragrafo-projetos-tecnoliga"><b>Tecnologias:</b> HTML, CSS, JavaScript.</p>
-                    <p class="paragrafo-projetos">Criei um site moderno e animado para apresentar minha trajetória como desenvolvedor. Com visual profissional, navegação fluida, responsividade e integração com WhatsApp, é meu cartão de visitas no mundo da programação. Tudo feito do zero, com foco em experiência do usuário e estilo!</p>
+                    <p class="paragrafo-projetos">Criei um site moderno e animado para apresentar minha trajetória como
+                        desenvolvedor. Com visual profissional, navegação fluida, responsividade e integração com
+                        WhatsApp, é meu cartão de visitas no mundo da programação. Tudo feito do zero, com foco em
+                        experiência do usuário e estilo!</p>
                 </div>
             </div>
 
@@ -97,21 +101,20 @@
                 <textarea placeholder="Nome" class="campo-form" id="nome"></textarea>
             </div>
             <div class="grupo-form">
-                <textarea placeholder="Digite Sua Mensagem" class="campo-form" id="mensagem"
-                    rows="6"></textarea>
+                <textarea placeholder="Digite Sua Mensagem" class="campo-form" id="mensagem" rows="6"></textarea>
             </div>
             <button type="submit" class="botao-form">Enviar whatsapp</button>
         </form>
     </section>
     <script>
         function enviarWhats(event) {
-            event.preventDefault(); 
-            const nome = document.getElementById('nome').value; 
+            event.preventDefault();
+            const nome = document.getElementById('nome').value;
             const mensagem = document.getElementById('mensagem').value;
             const telefone = '5515981190513';
 
             const texto = `Olá, me chamo  ${nome}, e estou entrando em contato sobre: ${mensagem}`;
-            const msgFormatada = encodeURIComponent (texto);
+            const msgFormatada = encodeURIComponent(texto);
 
             const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
 
